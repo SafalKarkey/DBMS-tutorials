@@ -154,10 +154,16 @@ VALUES
     ('Samantha Smith', 'Sara Davis'),
     ('Patrick', 'Jane Doe');
 
+UPDATE tbl_Employee
+	SET employee_name = 'Jane Doe', street = '123 Main St', city = 'New Mexico'
 
-SELECT * FROM tbl_Employee;
-SELECT * FROM tbl_Works;
-SELECT * FROM tbl_Manages;
+UPDATE tbl_Works
+	SET employee_name = 'Jane Doe', company_name = 'Pyongyang Corporation', salary = 40000
+
+SELECT * FROM tbl_Employee ORDER BY employee_name
+SELECT * FROM tbl_Works ORDER BY employee_name
+SELECT * FROM tbl_Manages ORDER BY employee_name
+SELECT * FROM tbl_company 
 
 -- Update the value of salary to 1000 where employee name= John Smith and company_name = First Bank Corporation
 UPDATE tbl_Works
